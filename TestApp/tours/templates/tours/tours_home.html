@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+{% block title %}Tours{% endblock %}
+{% block content %}
+    <div class="features">
+        <h1 align="center">Tours</h1>
+        <div class="card-deck">
+                {% for el in tours %}
+                <div class="card">
+                    <img class="card-img-top" src="{{el.img}}" width="300" height="200" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{el.name}}</h5>
+                        <h4 class = "card-text">{{el.date}}</h4>
+                        <h4 class = "card-text">{{el.equipment}}</h4>
+                        <h4 class = "card-text">{{el.price}}</h4>
+                    </div>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}
