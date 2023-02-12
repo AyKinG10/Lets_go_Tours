@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('equipment', models.CharField(max_length=20, verbose_name='Номер типі')),
                 ('price', models.IntegerField(verbose_name='Тур бағасы')),
                 ('img', models.IntegerField(verbose_name='Фото енгіз')),
-                ('category_id', models.ForeignKey()),
+                ('category_id', models.IntegerField(verbose_name='Category')),
             ],
         ),
     ]

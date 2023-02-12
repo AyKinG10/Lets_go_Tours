@@ -6,7 +6,7 @@ class Tours(models.Model):
     equipment = models.CharField('Номер типі',max_length=20)
     price = models.IntegerField('Тур бағасы')
     img = models.CharField('Фото енгізіңіз',max_length=450)
-    category_id = models.IntegerField()
+    category_id = models.IntegerField('Category')
 
 
     def __str__(self):
