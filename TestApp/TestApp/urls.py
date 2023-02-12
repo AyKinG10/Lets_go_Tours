@@ -12,8 +12,8 @@ urlpatterns = [
     path('', include('main.urls')),
     path('tours/', include('tours.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-handler404='main.views.not_found'
-handler500='main.views.not_serv'
-handler403='main.views.not_found'
-handler400='main.views.not_found'
+handler404 = 'main.views.not_found'
+handler500 = 'main.views.not_serv'
+handler403 = 'main.views.csrf_error'
+handler400 = 'main.views.bad_request'
 
