@@ -1,10 +1,10 @@
-{% extends 'main/layout.html' %}
-{% block title %}Main Page{% endblock %}
+{% include 'alllayouts/layout.html' %}
+<title>About Page</title>
 {% block content %}
     <div class="container">
         <h1 align="center">This is About Page</h1>
         <h2 align="left">Good afternoon guys</h2>
-        <form action="" method="post">
+        <form action="" method="post">{% csrf_token %}
             <label>name</label>
             <input type="name">
             <label>email</label>
