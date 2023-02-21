@@ -1,14 +1,41 @@
-{% include 'alllayouts/layout.html' %}
+{% extends 'alllayouts/layout.html' %}
 <title>Tours</title>
 {% block content %}
-    <div class="features">
+ <section id="blog">
+        <div class="container">
+            <h6 class="section-subtitle text-center">News Feeds</h6>
+            <h6 class="section-title mb-6 text-center">Our Blog</h6>
+
+            <div class="row">
+                {% for el in tours %}
+                <div class="col-md-4">
+                    <div class="card blog-post my-4 my-sm-5 my-md-0">
+                        <img src="{{el.img}}" alt="...." width="300" height="250">
+                        <div class="card-body">
+                            <div class="details mb-3">
+                                <a href="javascript:void(0)"><i class="ti-comments"></i> 123</a>
+                                <a href="javascript:void(0)"><i class="ti-eye"></i> 123</a>
+                            </div>
+                            <h5 class="card-title">{{el.name}}</h5>
+                            <p>{{el.date}}</p>
+                            <p>{{el.equipment}}</p>
+                            <p>{{el.price}}</p>
+                            <a href="javascript:void(0)" class="d-block mt-3">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--<div class="features">
         <h1 align="center">Tours</h1>
         <div class="card-deck">
                 {% for el in tours %}
                 <div class="card">
                     <img class="card-img-top" src="{{el.img}}" width="300" height="200" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">{{el.name}}</h5>
+                        <h5 class = "card-title">{{el.name}}</h5>
                         <h4 class = "card-text">{{el.date}}</h4>
                         <h4 class = "card-text">{{el.equipment}}</h4>
                         <h4 class = "card-text">{{el.price}}</h4>
@@ -16,5 +43,5 @@
                 </div>
                 {% endfor %}
         </div>
-    </div>
+    </div>-->
 {% endblock %}
